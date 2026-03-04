@@ -1399,6 +1399,307 @@ img {
     }
 }
 
+/* ========== Enroll Page ========== */
+
+.enroll-eyebrow {
+    font-family: Oswald, sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent);
+    text-align: center;
+    margin: 0 0 0.4rem;
+}
+
+.enroll-eyebrow--light {
+    opacity: 0.9;
+}
+
+.enroll-page-title {
+    font-family: Oswald, sans-serif;
+    font-size: clamp(2.2rem, 5vw, 3.25rem);
+    font-weight: 700;
+    color: var(--accent);
+    letter-spacing: 0.06em;
+    text-align: center;
+    margin: 0 0 2.5rem;
+    line-height: 1.1;
+}
+
+.enroll-section-title {
+    font-family: Oswald, sans-serif;
+    font-size: clamp(1.4rem, 3vw, 1.9rem);
+    font-weight: 700;
+    color: var(--text);
+    letter-spacing: 0.04em;
+    text-align: center;
+    margin: 0 0 3rem;
+    line-height: 1.2;
+}
+
+/* ---- Hero ---- */
+.enroll-hero {
+    padding-top: 3.5rem;
+    padding-bottom: 4rem;
+}
+
+.enroll-hero-centered {
+    max-width: 760px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    text-align: center;
+}
+
+/* Scripture pull-quote */
+.enroll-hero-scripture {
+    background: rgba(255, 127, 0, 0.07);
+    border: 1px solid rgba(255, 127, 0, 0.25);
+    border-radius: 12px;
+    padding: 1.75rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+}
+
+.enroll-scripture-ref {
+    font-family: Oswald, sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+}
+
+.enroll-scripture-text {
+    font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+    font-style: italic;
+    color: var(--text);
+    line-height: 1.6;
+    margin: 0;
+    font-weight: 500;
+}
+
+/* Visual divider between scripture and intro */
+.enroll-hero-divider {
+    width: 48px;
+    height: 3px;
+    background: var(--accent);
+    border-radius: 2px;
+    opacity: 0.6;
+}
+
+.enroll-hero-intro {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.enroll-hero-subtitle {
+    font-family: Oswald, sans-serif;
+    font-size: clamp(1.2rem, 2.5vw, 1.55rem);
+    font-weight: 600;
+    color: var(--text);
+    line-height: 1.3;
+    margin: 0;
+}
+
+.enroll-hero-intro p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--text-muted);
+    margin: 0;
+}
+
+/* ---- Requirements Section ---- */
+.enroll-requirements {
+    padding-top: 4rem;
+    padding-bottom: 5rem;
+    background: var(--bg-section);
+}
+
+.enroll-req-list {
+    max-width: 900px;
+    margin: 0 auto 3rem;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+/* Each requirement row */
+.enroll-req-item {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    background: rgba(255, 255, 255, 0.03);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    transition: background 0.15s ease;
+}
+
+.enroll-req-item:last-child {
+    border-bottom: none;
+}
+
+.enroll-req-item:hover {
+    background: rgba(255, 127, 0, 0.04);
+}
+
+/* Highlight the "ready to enroll" row */
+.enroll-req-item--cta {
+    background: rgba(255, 127, 0, 0.06);
+    border-top: 1px solid rgba(255, 127, 0, 0.2);
+}
+
+.enroll-req-item--cta:hover {
+    background: rgba(255, 127, 0, 0.1);
+}
+
+/* Label column */
+.enroll-req-label-col {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.75rem 1.5rem;
+    border-right: 1px solid rgba(255, 255, 255, 0.07);
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.enroll-req-number {
+    flex-shrink: 0;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(255, 127, 0, 0.15);
+    border: 1px solid rgba(255, 127, 0, 0.4);
+    color: var(--accent);
+    font-family: Oswald, sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    margin-top: 0.1rem;
+}
+
+.enroll-req-number--accent {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #fff;
+    box-shadow: 0 2px 10px rgba(255, 127, 0, 0.4);
+}
+
+.enroll-req-label {
+    font-family: Oswald, sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    line-height: 1.3;
+    margin: 0;
+    padding-top: 0.2rem;
+}
+
+/* Description column */
+.enroll-req-desc {
+    padding: 1.75rem 1.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    justify-content: center;
+}
+
+.enroll-req-desc p {
+    font-size: 0.95rem;
+    line-height: 1.75;
+    color: var(--text-muted);
+    margin: 0;
+}
+
+/* CTA button */
+.enroll-cta-wrap {
+    display: flex;
+    justify-content: center;
+    margin-top: 0.5rem;
+}
+
+.btn-enroll {
+    font-family: Oswald, sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 1rem 3rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(255, 127, 0, 0.4);
+}
+
+.btn-enroll:hover {
+    box-shadow: 0 6px 28px rgba(255, 127, 0, 0.55);
+}
+
+/* ---- Enroll responsive ---- */
+@media (max-width: 768px) {
+    .enroll-hero-scripture {
+        padding: 1.4rem 1.5rem;
+    }
+
+    .enroll-req-item {
+        grid-template-columns: 1fr;
+    }
+
+    .enroll-req-label-col {
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+        padding: 1.25rem 1.5rem;
+        background: rgba(0, 0, 0, 0.15);
+    }
+
+    .enroll-req-desc {
+        padding: 1.25rem 1.5rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .enroll-hero {
+        padding-top: 2.5rem;
+        padding-bottom: 3rem;
+    }
+
+    .enroll-requirements {
+        padding-top: 2.5rem;
+        padding-bottom: 3.5rem;
+    }
+
+    .enroll-page-title {
+        margin-bottom: 1.75rem;
+    }
+
+    .enroll-section-title {
+        margin-bottom: 2rem;
+    }
+
+    .enroll-req-label-col {
+        padding: 1rem 1.25rem;
+    }
+
+    .enroll-req-desc {
+        padding: 1rem 1.25rem;
+    }
+
+    .btn-enroll {
+        width: 100%;
+        max-width: 360px;
+        padding: 1rem 1.5rem;
+    }
+}
+
 /* Footer */
 .site-footer {
     padding: 3rem 2rem 2rem;
