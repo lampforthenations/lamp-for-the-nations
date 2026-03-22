@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pandoc --track-changes=all \"/Users/westleyharris/Downloads/Teaching Schedule Three Year Curriculum Updated for the Website 3-18-26.docx\" -o /tmp/curriculum.md)",
+      "Read(//tmp/**)",
+      "Read(//Users/westleyharris/Downloads/**)",
+      "Bash(python3 -c \":*)",
+      "mcp__Claude_Preview__preview_start"
+    ]
+  }
+}
