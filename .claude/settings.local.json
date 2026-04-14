@@ -5,7 +5,8 @@
       "Read(//tmp/**)",
       "Read(//Users/westleyharris/Downloads/**)",
       "Bash(python3 -c \":*)",
-      "mcp__Claude_Preview__preview_start"
+      "mcp__Claude_Preview__preview_start",
+      "WebSearch"
     ]
   }
 }
