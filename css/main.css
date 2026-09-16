@@ -399,6 +399,81 @@ img {
     box-shadow: 0 4px 14px rgba(255, 127, 0, 0.4);
 }
 
+.btn-disabled-wrap {
+    position: relative;
+    display: inline-block;
+    align-self: flex-start;
+}
+
+.btn-disabled,
+.btn-primary.btn-disabled,
+.btn-primary.btn-disabled:hover,
+.btn-enroll.btn-disabled,
+.btn-enroll.btn-disabled:hover {
+    background-color: #9a9a9a;
+    color: #f3f3f3;
+    box-shadow: none;
+    cursor: not-allowed;
+    opacity: 0.75;
+    transform: none;
+}
+
+.btn-disabled-tooltip {
+    position: absolute;
+    left: 50%;
+    bottom: calc(100% + 10px);
+    transform: translateX(-50%) translateY(6px);
+    background: #1c1228;
+    color: #fff;
+    padding: 0.5rem 0.85rem;
+    border-radius: 6px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    line-height: 1.3;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.28);
+    transition: opacity 0.18s ease, transform 0.18s ease, visibility 0.18s ease;
+    z-index: 20;
+}
+
+.btn-disabled-tooltip::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 6px solid transparent;
+    border-top-color: #1c1228;
+}
+
+.btn-disabled-wrap:hover .btn-disabled-tooltip,
+.btn-disabled-wrap:focus-within .btn-disabled-tooltip {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+@media (max-width: 480px) {
+    .btn-disabled-wrap {
+        align-self: stretch;
+        display: block;
+    }
+
+    .btn-disabled-wrap .btn {
+        width: 100%;
+    }
+
+    .btn-disabled-tooltip {
+        white-space: normal;
+        text-align: center;
+        max-width: min(240px, 80vw);
+    }
+}
+
 /* Mission section */
 .mission-section {
     padding-top: 2.5rem;
