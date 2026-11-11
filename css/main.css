@@ -1735,6 +1735,53 @@ img {
     line-height: 1.1;
 }
 
+.term-dates {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.75rem;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.term-dates li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.35rem;
+    min-height: 5.5rem;
+    padding: 0.9rem 0.75rem;
+    text-align: center;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 127, 0, 0.35);
+    background: rgba(255, 127, 0, 0.08);
+}
+
+.term-dates span {
+    font-family: Oswald, sans-serif;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+}
+
+.term-dates strong {
+    font-size: 1.05rem;
+    font-weight: 700;
+    line-height: 1.25;
+    color: #fff;
+}
+
+.term-dates--compact {
+    grid-template-columns: 1fr 1fr;
+}
+
+#new-student {
+    scroll-margin-top: 140px;
+}
+
 .enroll-section-title {
     font-family: Oswald, sans-serif;
     font-size: clamp(1.4rem, 3vw, 1.9rem);
@@ -1744,6 +1791,78 @@ img {
     text-align: center;
     margin: 0 0 3rem;
     line-height: 1.2;
+}
+
+.enroll-section-lead {
+    max-width: 720px;
+    margin: 0 auto 2.5rem;
+    text-align: center;
+    color: var(--text-muted);
+    line-height: 1.7;
+}
+
+.enroll-section-lead a,
+.enroll-form-note a,
+.return-back a {
+    color: var(--accent);
+    font-weight: 600;
+}
+
+.enroll-paths {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+    text-align: left;
+}
+
+.enroll-path-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    padding: 1.5rem 1.4rem;
+    border-radius: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.enroll-path-kicker {
+    font-family: Oswald, sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0;
+}
+
+.enroll-path-card h2 {
+    font-family: Oswald, sans-serif;
+    font-size: 1.45rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    margin: 0;
+}
+
+.enroll-path-card p {
+    margin: 0;
+    color: var(--text-muted);
+    line-height: 1.7;
+}
+
+.enroll-path-card .btn {
+    margin-top: auto;
+    align-self: flex-start;
+}
+
+.enroll-path-more {
+    color: var(--accent);
+    font-size: 0.92rem;
+    font-weight: 600;
+}
+
+.enroll-path-more:hover {
+    text-decoration: underline;
 }
 
 /* ---- Hero ---- */
@@ -1933,8 +2052,24 @@ img {
 /* CTA button */
 .enroll-cta-wrap {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    margin-top: 0.5rem;
+    gap: 1rem;
+    margin-top: 1.75rem;
+}
+
+.enroll-requirements .term-dates {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.enroll-form-note {
+    max-width: 520px;
+    margin: 0;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
 }
 
 .btn-enroll {
@@ -1958,6 +2093,14 @@ img {
         padding: 1.4rem 1.5rem;
     }
 
+    .enroll-paths {
+        grid-template-columns: 1fr;
+    }
+
+    .term-dates {
+        grid-template-columns: 1fr 1fr;
+    }
+
     .enroll-req-item {
         grid-template-columns: 1fr;
     }
@@ -1971,6 +2114,11 @@ img {
 
     .enroll-req-desc {
         padding: 1.25rem 1.5rem;
+    }
+
+    .enroll-cta-wrap .btn-enroll {
+        width: 100%;
+        max-width: 360px;
     }
 }
 
@@ -1989,6 +2137,11 @@ img {
         margin-bottom: 1.75rem;
     }
 
+    .term-dates,
+    .term-dates--compact {
+        grid-template-columns: 1fr;
+    }
+
     .enroll-section-title {
         margin-bottom: 2rem;
     }
@@ -2005,6 +2158,166 @@ img {
         width: 100%;
         max-width: 360px;
         padding: 1rem 1.5rem;
+    }
+}
+
+/* ========== Previous student form ========== */
+
+.return-form,
+.return-schedule,
+.return-form-success {
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+.return-form[hidden],
+.return-schedule[hidden],
+.return-form-success[hidden] {
+    display: none;
+}
+
+.return-form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 1.15rem;
+}
+
+.return-gotcha {
+    position: absolute;
+    left: -9999px;
+    height: 0;
+    width: 0;
+    opacity: 0;
+}
+
+.return-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.return-grid--2 {
+    grid-template-columns: 1fr 1fr;
+}
+
+.return-span-all {
+    grid-column: 1 / -1;
+}
+
+.return-fieldset {
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 8px;
+    padding: 0.85rem 1rem 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem 1.5rem;
+}
+
+.return-fieldset legend {
+    font-family: Oswald, sans-serif;
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 0 0.35rem;
+}
+
+.return-fieldset .inquiry-field {
+    flex: 1 1 140px;
+}
+
+.return-choice {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+    color: var(--text);
+}
+
+.return-check {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.65rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+.return-check input {
+    margin-top: 0.35rem;
+}
+
+.return-hint {
+    margin: -0.35rem 0 0;
+    color: var(--text-muted);
+    font-size: 0.92rem;
+    line-height: 1.6;
+}
+
+.return-form-error {
+    margin: 0;
+    color: #ffb4a2;
+    font-weight: 600;
+}
+
+.return-form-success {
+    background: rgba(255, 127, 0, 0.08);
+    border: 1px solid rgba(255, 127, 0, 0.3);
+    border-radius: 14px;
+    padding: 2rem 1.5rem;
+    text-align: center;
+}
+
+.return-form-success h2 {
+    font-family: Oswald, sans-serif;
+    font-size: 1.8rem;
+    margin: 0 0 0.75rem;
+}
+
+.return-form-success p {
+    color: var(--text-muted);
+    line-height: 1.7;
+    margin: 0 0 1.25rem;
+}
+
+.return-back {
+    margin: 0 0 1.5rem;
+}
+
+.return-courses {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+.return-courses th,
+.return-courses td {
+    text-align: left;
+    padding: 0.85rem 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    vertical-align: top;
+}
+
+.return-courses th {
+    width: 28%;
+    color: var(--accent);
+    font-weight: 600;
+}
+
+@media (max-width: 700px) {
+    .return-grid,
+    .return-grid--2 {
+        grid-template-columns: 1fr;
+    }
+
+    .return-courses th {
+        width: auto;
+        display: block;
+        padding-bottom: 0.2rem;
+    }
+
+    .return-courses td {
+        display: block;
+        padding-top: 0;
     }
 }
 
@@ -2285,6 +2598,12 @@ img {
     border-color: var(--accent);
     background: rgba(255, 127, 0, 0.05);
     box-shadow: 0 0 0 3px rgba(255, 127, 0, 0.15);
+}
+
+select.inquiry-input,
+.inquiry-input[type="date"],
+.inquiry-input[type="file"] {
+    color-scheme: dark;
 }
 
 .inquiry-submit-row {

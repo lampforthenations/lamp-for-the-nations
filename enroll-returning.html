@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Previous Student Enrollment - Lamp for the Nations</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="index.html" class="logo">
+                <img src="images/logo.jpg" alt="" class="logo-img">
+                <span class="logo-text">
+                    <span class="logo-title">LAMP FOR THE NATIONS</span>
+                    <span class="logo-tagline">Preparing Disciples for Ministry</span>
+                </span>
+            </a>
+            <button type="button" class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+                <span class="nav-toggle-bar"></span>
+                <span class="nav-toggle-bar"></span>
+                <span class="nav-toggle-bar"></span>
+            </button>
+            <nav class="main-nav" aria-label="Main">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="academics.html" class="nav-link">Academics</a>
+                <a href="enroll.html" class="nav-link active">Enroll</a>
+                <a href="staff.html" class="nav-link">Staff</a>
+                <a href="donate.html" class="nav-link">Donate</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="section enroll-hero section-alt">
+            <div class="container">
+                <p class="enroll-eyebrow">Returning Students Only</p>
+                <h1 class="enroll-page-title">PREVIOUS STUDENT ENROLLMENT</h1>
+                <div class="enroll-hero-centered">
+                    <ul class="term-dates" aria-label="Important dates">
+                        <li>
+                            <span>Enrollment Deadline</span>
+                            <strong>December 31, 2026</strong>
+                        </li>
+                        <li>
+                            <span>Classes Begin</span>
+                            <strong>January 25, 2027</strong>
+                        </li>
+                        <li>
+                            <span>Classes End</span>
+                            <strong>April 27, 2027</strong>
+                        </li>
+                        <li>
+                            <span>Course Duration</span>
+                            <strong>14 weeks</strong>
+                        </li>
+                    </ul>
+                    <div class="enroll-hero-intro">
+                        <p>This form is only for students who have already attended Lamp for the Nations. It is sent to <a href="mailto:lftn.office@gmail.com" class="inquiry-email-link">lftn.office@gmail.com</a>. Enrollment will not be accepted unless the form is fully completed.</p>
+                        <p class="return-back"><a href="enroll.html">Enrolling for the first time? Use the new student form.</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section enroll-requirements">
+            <div class="container">
+                <div id="return-form-success" class="return-form-success" tabindex="-1" hidden>
+                    <h2>Enrollment received</h2>
+                    <p>Thank you. Your previous student enrollment has been sent to the Lamp for the Nations office. Please watch the email address you submitted.</p>
+                    <a href="enroll.html" class="btn btn-primary">Back to enrollment</a>
+                </div>
+
+                <form id="return-form" class="return-form" action="https://formspree.io/f/xnjwvjra" method="POST" enctype="multipart/form-data">
+                    <input type="hidden" name="_subject" value="Previous Student Enrollment - Spring 2027">
+                    <input type="hidden" name="Student Type" value="Previous Returning Student">
+                    <input type="hidden" name="Semester" value="Spring 2027, January 25, 2027 through April 27, 2027">
+                    <input type="hidden" name="Spring 2027 First Year Courses" value="OT 102 Historical Books - James Streeter - Monday; NT 102 Romans and Galatians - Steve Langer - Monday; DP 103 Christian Development - Robert Ingram - Tuesday; MP 101 Power Evangelism - Lloyd Ware/Sam Fenceroy - Tuesday">
+                    <input type="text" name="_gotcha" class="return-gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+                    <div class="inquiry-field">
+                        <label class="inquiry-label" for="return-date">Today's Date</label>
+                        <input class="inquiry-input" type="date" id="return-date" name="Today's Date" required>
+                    </div>
+
+                    <div class="inquiry-field">
+                        <label class="inquiry-label" for="return-photo">Recent Picture of Yourself</label>
+                        <input class="inquiry-input" type="file" id="return-photo" name="Student Photo" accept="image/*" required>
+                        <p class="return-hint">Upload a recent photo. The file must be under 8 MB.</p>
+                    </div>
+
+                    <p class="return-hint">Please complete this form with your personal information.</p>
+
+                    <div class="return-grid">
+                        <div class="inquiry-field">
+                            <label class="inquiry-label" for="return-first">First Name</label>
+                            <input class="inquiry-input" type="text" id="return-first" name="First Name" autocomplete="given-name" required>
+                        </div>
+                        <div class="inquiry-field">
+                            <label class="inquiry-label" for="return-middle">Middle Name</label>
+                            <input class="inquiry-input" type="text" id="return-middle" name="Middle Name" autocomplete="additional-name">
+                        </div>
+                        <div class="inquiry-field">
+                            <label class="inquiry-label" for="return-last">Last or Sir Name</label>
+                            <input class="inquiry-input" type="text" id="return-last" name="Last or Sir Name" autocomplete="family-name" required>
+                        </div>
+                    </div>
+
+                    <fieldset class="return-fieldset">
+                        <legend>Birth Date</legend>
+                        <div class="inquiry-field">
+                            <label class="inquiry-label" for="return-birth-month">Month</label>
+                            <select class="inquiry-input" id="return-birth-month" name="Birth Month" required>
+                                <option value="">Month</option>
+                                <option>January</option>
+                                <option>February</option>
+                                <option>March</option>
+                                <option>April</option>
+                                <option>May</option>
+                                <option>June</option>
+                                <option>July</option>
+                                <option>August</option>
+                                <option>September</option>
+                                <option>October</option>
+                                <option>November</option>
+                                <option>December</option>
+                            </select>
+                        </div>
+                        <div class="inquiry-field">
+                            <label class="inquiry-label" for="return-birth-day">Day</label>
+                            <select class="inquiry-input" id="return-birth-day" name="Birth Day" required>
+                                <option value="">Day</option>
+                                <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+                                <option>6</option><option>7</option><option>8</option><option>9</option><option>10</option>
+                                <option>11</option><option>12</option><option>13</option><option>14</option><option>15</option>
+                                <option>16</option><option>17</option><option>18</option><option>19</option><option>20</option>
+                                <option>21</option><option>22</option><option>23</option><option>24</option><option>25</option>
+                                <option>26</option><option>27</option><option>28</option><option>29</option><option>30</option>
+                                <option>31</option>
+                            </select>
+                        </div>
+                        <div class="inquiry-field">
+                            <label class="inquiry-label" for="return-birth-year">Year</label>
+                            <input class="inquiry-input" type="number" id="return-birth-year" name="Birth Year" min="1920" max="2012" inputmode="numeric" placeholder="Year" required>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="return-fieldset">
+                        <legend>Gender</legend>
+                        <label class="return-choice"><input type="radio" name="Gender" value="Male" required> Male</label>
+                        <label class="return-choice"><input type="radio" name="Gender" value="Female"> Female</label>
+                    </fieldset>
+
+                    <div class="inquiry-field">
+                        <label class="inquiry-label" for="return-street">Street Address</label>
+                        <input class="inquiry-input" type="text" id="return-street" name="Street Address" autocomplete="address-line1" required>
+                    </div>
+                    <div class="inquiry-field">
+                        <label class="inquiry-label" for="return-street2">Street Address Line 2</label>
+                        <input class="inquiry-input" type="text" id="return-street2" name="Street Address Line 2" autocomplete="address-line2">
+                    </div>
+                    <div class="return-grid">
+                        <div class="inquiry-field">
+                            <label class="inquiry-label" for="return-city">City</label>
+                            <input class="inquiry-input" type="text" id="return-city" name="City" autocomplete="address-level2" required>
+                        </div>
+                        <div class="inquiry-field">
+                            <label class="inquiry-label" for="return-state">State or District</label>
+                            <input class="inquiry-input" type="text" id="return-state" name="State or District" autocomplete="address-level1" required>
+                        </div>
+                        <div class="inquiry-field">
+                            <label class="inquiry-label" for="return-country">Country</label>
+                            <input class="inquiry-input" type="text" id="return-country" name="Country" autocomplete="country-name" required>
+                        </div>
+                    </div>
+
+                    <div class="inquiry-field">
+                        <label class="inquiry-label" for="return-email">Email Address</label>
+                        <input class="inquiry-input" type="email" id="return-email" name="Email" autocomplete="email" required>
+                        <p class="return-hint">This is very important. Please use the previous email you have been using for Lamp for the Nations.</p>
+                    </div>
+
+                    <div class="inquiry-field">
+                        <label class="inquiry-label" for="return-phone">Phone Number</label>
+                        <input class="inquiry-input" type="tel" id="return-phone" name="Phone Number" autocomplete="tel" required>
+                    </div>
+
+                    <div class="inquiry-field">
+                        <label class="inquiry-label" for="return-signature">Signature</label>
+                        <input class="inquiry-input" type="text" id="return-signature" name="Signature" placeholder="Type your full name" required>
+                        <p class="return-hint">Typing your full name is your signature on this form.</p>
+                    </div>
+
+                    <div id="return-schedule" class="return-schedule">
+                        <h2 class="enroll-hero-subtitle">Spring 2027 Semester</h2>
+                        <p class="return-hint">January 25, 2027 through April 27, 2027 (14 weeks). First Year Students, Spring Semester 2027.</p>
+                        <table class="return-courses">
+                            <tbody>
+                                <tr>
+                                    <th scope="row">Old Testament</th>
+                                    <td>OT 102 Historical Books - James Streeter - Monday</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">New Testament</th>
+                                    <td>NT 102 Romans and Galatians - Steve Langer - Monday</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Personal</th>
+                                    <td>DP 103 Christian Development – Robert Ingram - Tuesday</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Ministry</th>
+                                    <td>MP 101 Power Evangelism – Lloyd Ware/Sam Fenceroy - Tuesday</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <label class="return-check">
+                        <input type="checkbox" name="Confirmation" value="I confirm I am a returning student and this form is complete." required>
+                        <span>I confirm I am a returning Lamp for the Nations student and this form is complete.</span>
+                    </label>
+
+                    <p id="return-form-error" class="return-form-error" role="alert" hidden></p>
+
+                    <div class="inquiry-submit-row">
+                        <button type="submit" class="btn btn-primary inquiry-submit-btn">Submit Enrollment</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <div class="footer-brand-row">
+                    <svg class="footer-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="32" height="32" aria-hidden="true">
+                        <path fill="#ED682C" d="M94.041 176.602s-30.785-5.289-38.199-33.211c-7.264-27.357 3.696-42.898 14.737-55.352C81.62 75.584 103.77 58.819 94.041 23c0 0 44.34 24.564 26.567 89.282 0 0 13.096-10.317 11.225-29.076 0 0 15.189 24.172 14.653 47.731-.621 27.305-20.266 40.436-36.168 46.064 0 0 11.225-15.007-9.821-31.78-14.175-11.297-2.34-38.566-2.34-38.566s-41.16 25.324-4.116 69.947z"/>
+                    </svg>
+                    <span class="footer-name">Lamp For The Nations</span>
+                </div>
+                <p class="footer-contact">iftn.office@gmail.com</p>
+                <p class="footer-address">1205 Newsom Rd Mesquite, Tx 75149</p>
+            </div>
+            <p class="footer-copy">© 2026</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
